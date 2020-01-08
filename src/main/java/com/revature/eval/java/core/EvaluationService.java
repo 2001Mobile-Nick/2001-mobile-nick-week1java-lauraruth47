@@ -30,19 +30,13 @@ public class EvaluationService {
 	 * @return
 	 */
 	public String acronym(String phrase) {
-		char[] acr = new char[3];
-		char[] test = new char[phrase.length()];
-		for (int i = 0, j = 0; i < phrase.length(); i++) {
-			if (test[i] == ' ') {
-				acr[j] = test[i+1];
-				System.out.println("Got one");
-				j++;
-			} else {
-				System.out.println("Couldn't create acronym");
-			}
+		String[] phraseArray = phrase.split(" ");
+		String acr = "";
+		for (int i = 0; i <= 2; i++) {
+			acr += phraseArray[i].charAt(0);
 		}
-		//use split()?
-		return phrase;
+		System.out.println(acr);
+		return acr;
 	}
 
 	/**
