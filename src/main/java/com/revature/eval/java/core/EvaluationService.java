@@ -90,17 +90,23 @@ public class EvaluationService {
 		}
 
 		public boolean isEquilateral() {
-			// TODO Write an implementation for this method declaration
+			if (sideOne == sideTwo && sideTwo == sideThree) {
+				return true;
+			} else
 			return false;
 		}
 
 		public boolean isIsosceles() {
-			// TODO Write an implementation for this method declaration
+			if (sideOne == sideTwo || sideOne == sideThree) {
+				return true;
+			} else
 			return false;
 		}
 
 		public boolean isScalene() {
-			// TODO Write an implementation for this method declaration
+			if (sideOne != sideTwo && sideOne != sideThree && sideTwo != sideThree) {
+				return true;
+			} else
 			return false;
 		}
 
@@ -122,8 +128,35 @@ public class EvaluationService {
 	 * @return
 	 */
 	public int getScrabbleScore(String string) {
-		// TODO Write an implementation for this method declaration
-		return 0;
+		int score = 0;
+		string = string.toUpperCase();
+		char[] wordChar = string.toCharArray();
+		for (int i = 0; i < (string.length()); i++) {
+			if (wordChar[i] == 'A' || wordChar[i] == 'E' || wordChar[i] == 'I' || wordChar[i] == 'O' || wordChar[i] == 'U' || wordChar[i] == 'L' || wordChar[i] == 'N' || wordChar[i] == 'R' || wordChar[i] == 'S' || wordChar[i] == 'T') {
+					score += 1;
+			}
+			else if (wordChar[i] == 'D' || wordChar[i] == 'G') {
+					score += 2;
+			}
+			else if (wordChar[i] == 'B' || wordChar[i] == 'C' || wordChar[i] == 'M' || wordChar[i] == 'P') {
+				score += 3;
+			}
+			else if (wordChar[i] == 'F' || wordChar[i] == 'H' || wordChar[i] == 'V' || wordChar[i] == 'W' || wordChar[i] == 'Y') {
+				score += 4;
+			}
+			else if (wordChar[i] == 'K') {
+				score += 5;
+			}
+			else if (wordChar[i] == 'J' || wordChar[i] == 'X') {
+				score += 8;
+			}
+			else if (wordChar[i] == 'Q' || wordChar[i] == 'Z') {
+				score += 10;
+			}
+		}
+		//System.out.println(string);
+		//System.out.println(score);
+		return score;
 	}
 
 	/**
