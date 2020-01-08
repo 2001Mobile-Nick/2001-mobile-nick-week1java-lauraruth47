@@ -5,12 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class EvaluationService {
-	public static void main(String[] args) {
-		String sample = new String("My Old Hat");
-		String acronym = new String();
-		acronym = acronym(sample);
-	}
-
+	
 	/**
 	 * 1. Without using the StringBuilder or StringBuffer class, write a method that
 	 * reverses a String. Example: reverse("example"); -> "elpmaxe"
@@ -38,7 +33,7 @@ public class EvaluationService {
 		char[] acr = new char[3];
 		char[] test = new char[phrase.length()];
 		for (int i = 0, j = 0; i < phrase.length(); i++) {
-			if (test[i] = " ") {
+			if (test[i] == ' ') {
 				acr[j] = test[i+1];
 				System.out.println("Got one");
 				j++;
@@ -46,7 +41,8 @@ public class EvaluationService {
 				System.out.println("Couldn't create acronym");
 			}
 		}
-		return new String(acr);
+		//use split()?
+		return phrase;
 	}
 
 	/**
