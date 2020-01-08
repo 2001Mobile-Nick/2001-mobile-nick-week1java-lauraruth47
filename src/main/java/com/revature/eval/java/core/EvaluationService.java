@@ -35,7 +35,8 @@ public class EvaluationService {
 		for (int i = 0; i <= 2; i++) {
 			acr += phraseArray[i].charAt(0);
 		}
-		System.out.println(acr);
+		acr = acr.toUpperCase();
+		//System.out.println(acr);
 		return acr;
 	}
 
