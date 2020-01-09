@@ -217,7 +217,30 @@ public class EvaluationService {
 	 * @return
 	 */
 	public Map<String, Integer> wordCount(String string) {
-		// TODO Write an implementation for this method declaration
+		/*
+		System.out.println("Entered: " + string);
+		string = string.replace("\n", " ");
+		string = string.replace(",", " ");
+		string = string.replace("  ", " ");
+		String[] wordArray = string.split(" ");
+		int numberOfWords = wordArray.length;
+		System.out.println("Number of words: " + numberOfWords);
+		for (int i = 0; i < numberOfWords; i++) {
+			for (int j = 0; j < numberOfWords; j++) {
+				if (wordArray[i] == wordArray[j]) {
+					int counter = 0;
+					counter++;
+					int wordCount[];
+					wordCount[i] = counter;
+				} else
+					continue;
+			}
+		}
+		for (String s: wordArray) {
+			System.out.println(s);
+			
+		}
+		*/
 		return null;
 	}
 
