@@ -191,17 +191,16 @@ public class EvaluationService {
 	 * NANP-countries, only 1 is considered a valid country code.
 	 */
 	public String cleanPhoneNumber(String string) {
-		string = string.trim();
-		string = string.replaceAll("+", " ");
-		string = string.replaceAll("-", " ");
-		string = string.replaceAll(".", " ");
-		string = string.replaceAll("(", " ");
-		string = string.replaceAll(")", " ");
-		string = string.trim();
+		System.out.println("Befor: " + string);
+		string = string.replace("+", " ");
+		string = string.replace("-", " ");
+		string = string.replace(".", " ");
+		string = string.replace("(", " ");
+		string = string.replace(")", " ");
+		string = string.replace(" ", "");
+		System.out.println("After: " + string);
 
-		String[] phArray = string.split(" ");
-		
-		return null;
+		return string;
 	}
 
 	/**
