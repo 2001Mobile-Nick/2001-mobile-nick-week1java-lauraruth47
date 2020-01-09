@@ -320,7 +320,29 @@ public class EvaluationService {
 	 * @return
 	 */
 	public String toPigLatin(String string) {
-		// TODO Write an implementation for this method declaration
+		/*
+		 * 1. split into words (hashmap? string array?)
+		 * 2. test beginning of each word
+		 * 		3. if begins with vowel
+		 * 			add ay to end
+		 * 		4. if starts with consonant
+		 * 			move consonant to end
+		 * 			add ay to end
+		 * 
+		 */
+		string = string.toLowerCase();
+		System.out.println(string);
+		String[] Consonants1 = {"chr", "spr", "str"};
+		String[] Consonants2 = {"ch", "cl", "cr", "dr", "fl", "fr", "gl", "gr", "kr", "ph", "pl", "pr", "sh", "sl", "sm", "sn", "sp", "sr", "st", "sw", "wr"};
+		String[] consonants3 = {"b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "y", "z"};
+		String[] englishArray = string.split(" ");
+		//englishArray.startsWith(i);
+		if (englishArray[0].startsWith("y") == true) {
+			System.out.println("This starts with y");
+		}
+			//System.out.println(englishArray[i].charAt(0));
+			//System.out.println(englishArray[i]);
+		
 		return null;
 	}
 
