@@ -333,12 +333,34 @@ public class EvaluationService {
 		string = string.toLowerCase();
 		System.out.println(string);
 		String[] Consonants1 = {"chr", "spr", "str"};
-		String[] Consonants2 = {"ch", "cl", "cr", "dr", "fl", "fr", "gl", "gr", "kr", "ph", "pl", "pr", "sh", "sl", "sm", "sn", "sp", "sr", "st", "sw", "wr"};
-		String[] consonants3 = {"b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "y", "z"};
+		String[] Consonants2 = {"ch", "cl", "cr", "dr", "fl", "fr", "gl", "gr", "kr", "ph", "pl", "pr", "qu", "sh", "sl", "sm", "sn", "sp", "sr", "st", "sw", "wr"};
+		String[] Consonants3 = {"b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "y", "z"};
 		String[] englishArray = string.split(" ");
-		//englishArray.startsWith(i);
-		if (englishArray[0].startsWith("y") == true) {
-			System.out.println("This starts with y");
+		String[] pigLatin = {};
+		for (int i = 0; i < englishArray.length; i++) {
+			System.out.println("inside first for loop");
+			for (int j = 0; j < Consonants1.length; j++) {
+				System.out.println("inside second for loop");
+				/*
+				if (englishArray[i].startsWith(Consonants1[j]) == true) {
+					pigLatin[i] = englishArray[i].substring(3);
+					pigLatin[i] = pigLatin[i].concat("ay");
+					System.out.println(pigLatin[i]);
+				} else if (englishArray[i].startsWith(Consonants2[j]) == true) {
+					pigLatin[i] = englishArray[i].substring(2);
+					pigLatin[i] = pigLatin[i].concat("ay");
+					System.out.println(pigLatin[i]);
+				} else if (englishArray[i].startsWith(Consonants3[j]) == true) {
+					pigLatin[i] = englishArray[i].substring(1);
+					pigLatin[i] = pigLatin[i].concat("ay");
+					System.out.println(pigLatin[i]);
+				} else
+					continue;
+				*/
+				if (englishArray[i].startsWith(Consonants3[j]) == true) {
+					System.out.println("starts with consonant");
+				}
+			}
 		}
 			//System.out.println(englishArray[i].charAt(0));
 			//System.out.println(englishArray[i]);
